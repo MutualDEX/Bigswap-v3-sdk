@@ -1,14 +1,19 @@
 {
+    "include": ["dist"],
     "compilerOptions": { 
       "target": "es6", 
       "module": "commonjs",
+      "sourceMap": true,  
       "strict": true, 
       "declaration": true,
-      "outDir": "./dist"
+      "outDir": "./dist",
+      "baseUrl": "./",
+      "paths": {
+      "*": ["src/*", "dist/*", "./dist", "node_modules/*"]    
     },
     "exclude": [
-        "tests",
-        "dist",
+        "src",
+        "test",
         "node_modules"
     ]
   }
